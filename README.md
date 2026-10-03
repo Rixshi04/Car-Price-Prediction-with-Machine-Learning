@@ -1,64 +1,61 @@
 # Car Price Prediction with Machine Learning
 
 ## Overview
-This project leverages machine learning techniques to predict car prices based on various features such as brand, model, mileage, year, and more. It includes data preprocessing, visualization, model training, and evaluation.
+This project uses machine learning to predict car prices from features such as age, mileage, horsepower, and brand. It includes data preprocessing, exploratory visualization, one-hot encoding, Linear Regression training, and evaluation.
 
-## Features
-- Data preprocessing and handling missing values
-- Exploratory Data Analysis (EDA) with visualizations
-- Feature encoding for categorical data
-- Correlation heatmap analysis
-- Linear Regression model training and evaluation
+## Project structure
 
-## Technologies Used
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
+- `car price.py` — main training and evaluation script
+- `dataset` — bundled tab-separated dataset used by the script
+- `requirements.txt` — Python dependencies
 
 ## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/car-price-prediction.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd car-price-prediction
-   ```
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
 
-## Usage
-1. Load the dataset `car_prices.csv` into the project directory.
-2. Run the main script:
-   ```bash
-   python car_price_prediction.py
-   ```
-3. The script will:
-   - Load and preprocess the dataset
-   - Perform exploratory data analysis
-   - Train a Linear Regression model
-   - Evaluate model performance using Mean Squared Error and R-squared metrics
+Clone the repository and enter the project directory:
 
-## Data Source
-The dataset should include:
-- **Price**: The target variable representing car prices
-- **Features**: Various attributes like year, brand, mileage, etc.
+```bash
+git clone https://github.com/Rixshi04/Car-Price-Prediction-with-Machine-Learning.git
+cd Car-Price-Prediction-with-Machine-Learning
+```
 
-Ensure the dataset is formatted correctly as a CSV file.
+Install the dependencies:
 
-## Results
-- Insights from EDA and correlation analysis
-- Model evaluation metrics (MSE and R-squared)
-- Predicted car prices based on test data
+```bash
+python -m pip install -r requirements.txt
+```
 
-## Contribution
-Feel free to contribute by submitting issues or pull requests.
+## Run from the repository root
+
+Use:
+
+```bash
+python "car price.py"
+```
+
+The script resolves the bundled `dataset` file relative to the script location, so it works when launched from the repository root.
+
+The script will:
+- Load and inspect the dataset
+- Check and forward-fill missing values
+- One-hot encode the `Brand` column
+- Display a correlation heatmap
+- Train a Linear Regression model
+- Report Mean Squared Error and R-squared on the test set
+
+## Dataset
+
+The repository includes the dataset directly as `dataset`. Its columns are:
+
+- `Age`
+- `Mileage`
+- `Horsepower`
+- `Brand`
+- `Price`
+
+## Notes
+
+The project is a simple educational regression example. The reported metrics depend on the bundled dataset and the fixed train/test split.
 
 ## License
-Specify the license under which the project is distributed.
 
+See the repository license file.
